@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TransitEye</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+    TransitEye
+</header>
+
+<div id="container">
+    <aside id="sidebar">
+        <h2>BUS Number</h2>
+        <ul id="bus-list">
+            <!-- বাসের নামগুলো JS দিয়ে যোগ হবে -->
+        </ul>
+    </aside>
+    <section id="map"></section>
+</div>
+
+
+<!-- Login Button -->
+<button onclick="openLoginModal()" id="login-btn">🔐 Login</button>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <h2>Login to TransitEye</h2>
+    
+    <form method="POST" action="/admin/login/">
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    </form>
+
+  </div>
+</div>
+
+
+<footer class="footer">
+  <p>&copy; 2025 TransitEye. All rights reserved.</p>
+</footer>
+
+
+<!-- Google Maps API (আপনার API KEY বসাতে হবে) -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8gX5uwshWjM3TZEU5IultOpN88Z0gbDQ"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
